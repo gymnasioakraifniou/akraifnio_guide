@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Αρχική – Ακραίφνιο</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; background:#f4f1eb; color:#2c2c2c; min-height:100vh; display:flex; flex-direction:column; }
+header { background:linear-gradient(135deg,#1a3a2a,#2d6a4f,#40916c); color:#fff; padding:20px 28px; display:flex; align-items:center; gap:14px; box-shadow:0 3px 12px rgba(0,0,0,.3); }
+header .logo { font-size:2em; }
+header h1 { font-size:1.45em; font-weight:800; }
+header p { font-size:.85em; opacity:.85; font-style:italic; }
+nav { background:#162e20; display:flex; flex-wrap:wrap; gap:2px; padding:6px 14px; }
+nav a { color:#b7e4c7; text-decoration:none; padding:7px 13px; border-radius:6px; font-size:.82em; font-weight:600; transition:background .2s; }
+nav a:hover, nav a.active { background:#40916c; color:#fff; }
+.container { max-width:960px; margin:0 auto; padding:24px 20px 40px; flex:1; width:100%; }
+footer { background:#1a3a2a; color:#95d5b2; text-align:center; padding:16px; font-size:.83em; }
+footer strong { color:#fff; }
+.map-btn { display:inline-flex; align-items:center; gap:6px; background:#4285f4; color:#fff; text-decoration:none; padding:7px 14px; border-radius:7px; font-size:.8em; font-weight:600; white-space:nowrap; transition:background .2s; }
+.map-btn:hover { background:#1a5dc0; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; background:#2d6a4f; color:#fff; text-decoration:none; padding:7px 14px; border-radius:7px; font-size:.82em; font-weight:600; margin-bottom:20px; transition:background .2s; }
+.back-btn:hover { background:#1a3a2a; }
+.pill { display:inline-block; border-radius:20px; padding:3px 12px; font-size:.79em; font-weight:600; margin:3px 2px; }
+.pill-tel { background:#fff3cd; border:1px solid #ffc107; color:#856404; }
+.pill-time { background:#cce5ff; border:1px solid #004085; color:#004085; }
+.pill-note { background:#e9f5ed; border:1px solid #40916c; color:#1a3a2a; }
+.quote-box { background:#fffbea; border-left:5px solid #f5a623; border-radius:0 8px 8px 0; padding:12px 16px; margin:10px 0; font-style:italic; color:#5a4000; font-size:.93em; }
+.section-hero { background:linear-gradient(135deg,#2d6a4f,#40916c); color:#fff; border-radius:12px; padding:22px 26px; margin-bottom:22px; display:flex; align-items:center; gap:14px; }
+.section-hero .sh-icon { font-size:2.3em; }
+.section-hero h2 { font-size:1.4em; font-weight:800; }
+.section-hero p { font-size:.88em; opacity:.85; margin-top:3px; }
+.item-card { background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); margin-bottom:22px; overflow:hidden; border:1px solid #d4edda; }
+.item-card-img { width:100%; height:210px; object-fit:cover; display:block; background:#e8f5e9; }
+.item-card-img-ph { width:100%; height:210px; display:flex; align-items:center; justify-content:center; font-size:4em; background:linear-gradient(135deg,#d8f3dc,#b7e4c7); }
+.item-card-body { padding:20px 22px; }
+.item-card-body h3 { color:#1a3a2a; font-size:1.1em; font-weight:700; margin-bottom:8px; padding-bottom:7px; border-bottom:2px solid #d4edda; }
+.item-card-body p { font-size:.93em; line-height:1.7; margin-bottom:7px; }
+.item-card-body ul { margin:7px 0 7px 18px; font-size:.91em; }
+.item-card-body ul li { margin-bottom:4px; }
+@media(max-width:620px){ nav a { font-size:.75em; padding:5px 9px; } .section-hero { flex-direction:column; text-align:center; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🏛️</div>
+  <div><h1>Ακραίφνιο Βοιωτίας</h1><p>Τουριστικός Οδηγός του Χωριού μας</p></div>
+</header>
+<nav>
+  <a href="index.html">🏠 Αρχική</a>
+  <a href="istoria.html">🏛️ Ιστορία</a>
+  <a href="thriskeftika.html">⛪ Θρησκευτικά</a>
+  <a href="fisi.html">🌿 Φύση</a>
+  <a href="fagito.html">🍽️ Φαγητό</a>
+  <a href="ekpaideysi.html">🏫 Εκπαίδευση</a>
+  <a href="politismos.html">🎭 Πολιτισμός</a>
+  <a href="athlitismos.html">⚽ Αθλητισμός</a>
+</nav>
+<div class="container">
+
+<style>
+.hero{background:linear-gradient(135deg,#2d6a4f,#52b788);color:#fff;border-radius:14px;padding:32px;margin-bottom:28px;text-align:center;}
+.hero h2{font-size:1.7em;margin-bottom:8px;}
+.hero p{font-size:.98em;opacity:.9;max-width:600px;margin:0 auto;}
+h2.cat-title{font-size:1.05em;font-weight:800;color:#fff;background:#2d6a4f;padding:9px 16px;border-radius:8px 8px 0 0;margin-top:24px;display:flex;align-items:center;gap:8px;}
+.list{background:#fff;border-radius:0 0 10px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);border:1px solid #d4edda;border-top:none;overflow:hidden;}
+.item{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #eaf4ec;gap:10px;transition:background .15s;}
+.item:last-child{border-bottom:none;}
+.item:hover{background:#f0faf3;}
+.item-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0;}
+.item-icon{font-size:1.4em;width:34px;text-align:center;flex-shrink:0;}
+.item-info h3{font-size:.93em;font-weight:700;color:#1a3a2a;margin-bottom:1px;}
+.item-info h3 a{color:#1a3a2a;text-decoration:none;}
+.item-info h3 a:hover{color:#2d6a4f;text-decoration:underline;}
+.item-info p{font-size:.78em;color:#555;}
+.item-btns{display:flex;gap:6px;flex-shrink:0;}
+.detail-btn{display:inline-flex;align-items:center;gap:5px;background:#40916c;color:#fff;text-decoration:none;padding:6px 12px;border-radius:7px;font-size:.78em;font-weight:600;white-space:nowrap;transition:background .2s;}
+.detail-btn:hover{background:#1a3a2a;}
+.no-map{display:inline-flex;align-items:center;background:#e9ecef;color:#666;padding:6px 12px;border-radius:7px;font-size:.78em;white-space:nowrap;}
+@media(max-width:600px){.item{flex-direction:column;align-items:flex-start;}.item-btns{width:100%;}.detail-btn,.map-btn,.no-map{flex:1;justify-content:center;}}
+</style>
+
+<div class="hero">
+  <h2>🏛️ Καλωσήρθατε στο Ακραίφνιο!</h2>
+  <p>Ημιορεινό χωριό του νομού Βοιωτίας, στις πλαγιές του όρους Πτώου, σε υψόμετρο 180μ.<br>Πληθυσμός: 1.058 κάτοικοι (απογραφή 2011)</p>
+</div>
+<h2 class="cat-title">🏛️ Ιστορία &amp; Αρχαιολογία</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🏯</div>
+      <div class="item-info">
+        <h3><a href="istoria.html#akropoli">Ακρόπολη Αρχαίας Ακραιφίας (Λόφος Βίγλιζα)</a></h3>
+        <p>Τείχη 4ου αι. π.Χ. &amp; πεντάγωνος πύργος</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="istoria.html#akropoli">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/sFpgpcfetsPuvRFz9" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">⛰️</div>
+      <div class="item-info">
+        <h3><a href="istoria.html#ptoon">Βουνό Πτώον – Ιερό Πτώου Απόλλωνα</a></h3>
+        <p>Αρχαίο μαντείο · Ηρόδοτος &amp; Παυσανίας · Πεζοπορία</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="istoria.html#ptoon">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/XjgdtrXAZeVjimuW8" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🏺</div>
+      <div class="item-info">
+        <h3><a href="istoria.html#nekrotafeio">Παλαιό Αρχαίο Νεκροταφείο</a></h3>
+        <p>Πιθανώς στρατιωτών Μεγάλου Αλεξάνδρου</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="istoria.html#nekrotafeio">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/YziaNqzkMLJshBot8" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🦇</div>
+      <div class="item-info">
+        <h3><a href="istoria.html#sarakino">Σπήλαιο Σαρακήνο</a></h3>
+        <p>Ευρήματα από 40.000 π.Χ. · Θέα σε Ελικώνα &amp; Παρνασσό</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="istoria.html#sarakino">📖 Λεπτομέρειες</a>
+      <span class="no-map">📌 Τοπικά</span>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">⛪ Θρησκευτικά Μνημεία</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">⛪</div>
+      <div class="item-info">
+        <h3><a href="thriskeftika.html#ag_georgios">Ιερός Ναός Αγίου Γεωργίου</a></h3>
+        <p>Υστεροβυζαντινός · Τοιχογραφίες Κοντάρη · 23 Απριλίου</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="thriskeftika.html#ag_georgios">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/M5Bt3p51dmKawaueA" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🕍</div>
+      <div class="item-info">
+        <h3><a href="thriskeftika.html#moni_pelagias">Ιερά Μονή Αγίας Πελαγίας</a></h3>
+        <p>~4–5 χλμ. από το χωριό · υψ. 550μ. · 8 Σεπτεμβρίου</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="thriskeftika.html#moni_pelagias">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/151g7Vqj8gpc7DKQ9" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🕊️</div>
+      <div class="item-info">
+        <h3><a href="thriskeftika.html#panagia">Ιερός Ναός Παναγίας</a></h3>
+        <p>Πετρόχτιστο εκκλησάκι εισόδου · Δεκαπενταύγουστος</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="thriskeftika.html#panagia">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/fKv5oiJxNeJJTpyL7" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🙏</div>
+      <div class="item-info">
+        <h3><a href="thriskeftika.html#agia_paraskevi">Εκκλησία Αγίας Παρασκευής</a></h3>
+        <p>Βυζαντινά πρότυπα 12ου αι. · Θέα στην Υλίκη · 26 Ιουλίου</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="thriskeftika.html#agia_paraskevi">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/LEwZ6AnQFzesJgLM6" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">🌿 Φύση &amp; Περιβάλλον</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🌊</div>
+      <div class="item-info">
+        <h3><a href="fisi.html#yliki">Λίμνη Υλίκη</a></h3>
+        <p>Από τις μεγαλύτερες λίμνες της Ελλάδας · Ύδρευση Αθήνας</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="fisi.html#yliki">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/uJ3ekp1Cih6DpcLs5" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🌲</div>
+      <div class="item-info">
+        <h3><a href="fisi.html#ptoon_fisi">Βουνό Πτώον (Φύση &amp; Πεζοπορία)</a></h3>
+        <p>Πλούσια βλάστηση · Πανοραμική θέα στον κάμπο</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="fisi.html#ptoon_fisi">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/XjgdtrXAZeVjimuW8" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">🍽️ Φαγητό &amp; Διασκέδαση</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🍖</div>
+      <div class="item-info">
+        <h3><a href="fagito.html#evgeston">Ψητοπωλείο «Το Εύγευστον»</a></h3>
+        <p>📞 22680 31709 · Κα/νά 17:00–00:00 (εκτός Κυρ.)</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="fagito.html#evgeston">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/uA6EjNRWvPtXdKnS9" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🔥</div>
+      <div class="item-info">
+        <h3><a href="fagito.html#flame">Εστιατόριο Flame</a></h3>
+        <p>📞 22680 31700 · Καθ/νά 16:00–01:55 · Delivery</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="fagito.html#flame">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/TSHToHtNPTnW5Ehm7" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🎵</div>
+      <div class="item-info">
+        <h3><a href="fagito.html#after">After Bar-Club</a></h3>
+        <p>📞 22680 31322 · Από το 1996 · Cafe-bar + Club</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="fagito.html#after">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/e987hqH6vyPmHc8w6" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">🏫 Εκπαίδευση &amp; Υπηρεσίες</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">📚</div>
+      <div class="item-info">
+        <h3><a href="ekpaideysi.html#dimotiko">Δημοτικό Σχολείο Ακραιφνίου</a></h3>
+        <p>📞 2268031294 · Πρόγραμμα «Πράσινα Σχολεία»</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="ekpaideysi.html#dimotiko">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/DDftwK2wsVo1vJ8D7" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🎓</div>
+      <div class="item-info">
+        <h3><a href="ekpaideysi.html#gymnasio">Γυμνάσιο με Λυκειακές Τάξεις</a></h3>
+        <p>📞 2268031460 · Πρόγραμμα «ΠΥΞΙΔΑ»</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="ekpaideysi.html#gymnasio">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/x1jmjsxBsscqVmY59" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🏛️</div>
+      <div class="item-info">
+        <h3><a href="ekpaideysi.html#autodioikisi">Τοπική Αυτοδιοίκηση Ακραιφνίου</a></h3>
+        <p>Δήμος Ορχομενού · Πολιτιστική κληρονομιά &amp; ανάπτυξη</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="ekpaideysi.html#autodioikisi">📖 Λεπτομέρειες</a>
+      <span class="no-map">📌 Τοπικά</span>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">🎭 Πολιτισμός &amp; Σύλλογοι</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🎭</div>
+      <div class="item-info">
+        <h3><a href="politismos.html#syllogoi">Πολιτιστικοί Σύλλογοι «Το Γλαύ» &amp; «Η Λητώ»</a></h3>
+        <p>Χοροεσπερίδες · Παραδοσιακές εκδηλώσεις</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="politismos.html#syllogoi">📖 Λεπτομέρειες</a>
+      <span class="no-map">📌 Τοπικά</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🪖</div>
+      <div class="item-info">
+        <h3><a href="politismos.html#mnimio">Μνημείο Ηρώων</a></h3>
+        <p>«Ανδρών επιφανών πάσα γη τάφος» · Εθνικές επέτειοι</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="politismos.html#mnimio">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/S7Rp6MVHHAsbezxTA" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+</div>
+<h2 class="cat-title">⚽ Αθλητισμός</h2>
+<div class="list">
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">🏟️</div>
+      <div class="item-info">
+        <h3><a href="athlitismos.html#stadio">Δημοτικό Στάδιο Ακραιφνίου</a></h3>
+        <p>102μ.×60μ. · Ποδόσφαιρο, μπάσκετ, γυμναστήριο · Πάντα ανοιχτό</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="athlitismos.html#stadio">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/zXa9s6z3WUEBX6ML8" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-left">
+      <div class="item-icon">⚽</div>
+      <div class="item-info">
+        <h3><a href="athlitismos.html#apollon">Α.Ο. Απόλλων Ακραιφνίου</a></h3>
+        <p>Ιδρύθηκε 1976 · Άσπρο &amp; μπλε · Ε.Π.Σ. Βοιωτίας</p>
+      </div>
+    </div>
+    <div class="item-btns">
+      <a class="detail-btn" href="athlitismos.html#apollon">📖 Λεπτομέρειες</a>
+      <a class="map-btn" href="https://maps.app.goo.gl/zXa9s6z3WUEBX6ML8" target="_blank">📍 Χάρτης</a>
+    </div>
+  </div>
+</div>
+
+</div>
+<footer>
+  <strong>Τουριστικός Οδηγός Ακραιφνίου</strong> — Ακραίφνιο Βοιωτίας &nbsp;|&nbsp;
+  <span style="opacity:.8">Πληροφορίες από τους μαθητές μας 🎓</span>
+</footer>
+</body>
+</html>

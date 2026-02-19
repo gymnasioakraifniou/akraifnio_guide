@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Θρησκευτικά Μνημεία – Ακραίφνιο</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; background:#f4f1eb; color:#2c2c2c; min-height:100vh; display:flex; flex-direction:column; }
+header { background:linear-gradient(135deg,#1a3a2a,#2d6a4f,#40916c); color:#fff; padding:20px 28px; display:flex; align-items:center; gap:14px; box-shadow:0 3px 12px rgba(0,0,0,.3); }
+header .logo { font-size:2em; }
+header h1 { font-size:1.45em; font-weight:800; }
+header p { font-size:.85em; opacity:.85; font-style:italic; }
+nav { background:#162e20; display:flex; flex-wrap:wrap; gap:2px; padding:6px 14px; }
+nav a { color:#b7e4c7; text-decoration:none; padding:7px 13px; border-radius:6px; font-size:.82em; font-weight:600; transition:background .2s; }
+nav a:hover, nav a.active { background:#40916c; color:#fff; }
+.container { max-width:960px; margin:0 auto; padding:24px 20px 40px; flex:1; width:100%; }
+footer { background:#1a3a2a; color:#95d5b2; text-align:center; padding:16px; font-size:.83em; }
+footer strong { color:#fff; }
+.map-btn { display:inline-flex; align-items:center; gap:6px; background:#4285f4; color:#fff; text-decoration:none; padding:7px 14px; border-radius:7px; font-size:.8em; font-weight:600; white-space:nowrap; transition:background .2s; }
+.map-btn:hover { background:#1a5dc0; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; background:#2d6a4f; color:#fff; text-decoration:none; padding:7px 14px; border-radius:7px; font-size:.82em; font-weight:600; margin-bottom:20px; transition:background .2s; }
+.back-btn:hover { background:#1a3a2a; }
+.pill { display:inline-block; border-radius:20px; padding:3px 12px; font-size:.79em; font-weight:600; margin:3px 2px; }
+.pill-tel { background:#fff3cd; border:1px solid #ffc107; color:#856404; }
+.pill-time { background:#cce5ff; border:1px solid #004085; color:#004085; }
+.pill-note { background:#e9f5ed; border:1px solid #40916c; color:#1a3a2a; }
+.quote-box { background:#fffbea; border-left:5px solid #f5a623; border-radius:0 8px 8px 0; padding:12px 16px; margin:10px 0; font-style:italic; color:#5a4000; font-size:.93em; }
+.section-hero { background:linear-gradient(135deg,#2d6a4f,#40916c); color:#fff; border-radius:12px; padding:22px 26px; margin-bottom:22px; display:flex; align-items:center; gap:14px; }
+.section-hero .sh-icon { font-size:2.3em; }
+.section-hero h2 { font-size:1.4em; font-weight:800; }
+.section-hero p { font-size:.88em; opacity:.85; margin-top:3px; }
+.item-card { background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); margin-bottom:22px; overflow:hidden; border:1px solid #d4edda; }
+.item-card-img { width:100%; height:210px; object-fit:cover; display:block; background:#e8f5e9; }
+.item-card-img-ph { width:100%; height:210px; display:flex; align-items:center; justify-content:center; font-size:4em; background:linear-gradient(135deg,#d8f3dc,#b7e4c7); }
+.item-card-body { padding:20px 22px; }
+.item-card-body h3 { color:#1a3a2a; font-size:1.1em; font-weight:700; margin-bottom:8px; padding-bottom:7px; border-bottom:2px solid #d4edda; }
+.item-card-body p { font-size:.93em; line-height:1.7; margin-bottom:7px; }
+.item-card-body ul { margin:7px 0 7px 18px; font-size:.91em; }
+.item-card-body ul li { margin-bottom:4px; }
+@media(max-width:620px){ nav a { font-size:.75em; padding:5px 9px; } .section-hero { flex-direction:column; text-align:center; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🏛️</div>
+  <div><h1>Ακραίφνιο Βοιωτίας</h1><p>Τουριστικός Οδηγός του Χωριού μας</p></div>
+</header>
+<nav>
+  <a href="index.html">🏠 Αρχική</a>
+  <a href="istoria.html">🏛️ Ιστορία</a>
+  <a href="thriskeftika.html">⛪ Θρησκευτικά</a>
+  <a href="fisi.html">🌿 Φύση</a>
+  <a href="fagito.html">🍽️ Φαγητό</a>
+  <a href="ekpaideysi.html">🏫 Εκπαίδευση</a>
+  <a href="politismos.html">🎭 Πολιτισμός</a>
+  <a href="athlitismos.html">⚽ Αθλητισμός</a>
+</nav>
+<div class="container">
+<a class="back-btn" href="index.html">← Επιστροφή στην Αρχική</a>
+<div class="section-hero">
+  <span class="sh-icon">⛪</span>
+  <div><h2>Θρησκευτικά Μνημεία</h2><p>Ναοί, Μονές & Εκκλησίες</p></div>
+</div>
+<div id="ag_georgios" class="item-card">
+  <img class="item-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Agios_Georgios_Akraifnio.jpg/800px-Agios_Georgios_Akraifnio.jpg" alt="Ναός Αγίου Γεωργίου" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="item-card-img-ph" style="display:none">⛪</div>
+  <div class="item-card-body">
+    <h3>⛪ Ιερός Ναός Αγίου Γεωργίου</h3>
+    <p>Χρονολογείται στην <strong>Υστεροβυζαντινή περίοδο / Λατινοκρατία (1204–1446)</strong>. Είναι χτισμένος πάνω σε χώρο αρχαίου <strong>ναού του Διονύσου</strong> και παλαιότερου κτηρίου με πρώιμο βυζαντινό ψηφιδωτό.</p>
+    <p>Αρχιτεκτονικά είναι <strong>σταυροειδής με τρούλο</strong>. Στο εσωτερικό σώζονται τοιχογραφίες από τους Θηβαίους ζωγράφους <strong>Γεώργιο και Φράγκο Κοντάρη</strong> (16ος αιώνας).</p>
+    <p><span class="pill pill-note">🕯️ Πανήγυρη: 23 Απριλίου</span></p>
+    <a class="map-btn" href="https://maps.app.goo.gl/M5Bt3p51dmKawaueA" target="_blank">📍 Δες στον Χάρτη</a>
+  </div>
+</div><div id="moni_pelagias" class="item-card">
+  <img class="item-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Moni_Pelagias_Akraifnio.jpg/800px-Moni_Pelagias_Akraifnio.jpg" alt="Μονή Αγίας Πελαγίας" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="item-card-img-ph" style="display:none">🕍</div>
+  <div class="item-card-body">
+    <h3>🕍 Ιερά Μονή Αγίας Πελαγίας</h3>
+    <p>Η <strong>Ιερά Μονή Γενεθλίου της Θεοτόκου Πελαγίας</strong> βρίσκεται σε απόσταση <strong>4–5 χλμ.</strong> από τον οικισμό, σε υψόμετρο πάνω από <strong>550 μέτρα</strong>, στις πλαγιές του όρους Πτώου.</p>
+    <p>Είναι κτισμένη κοντά στον αρχαιολογικό χώρο του Ιερού του Πτώου Απόλλωνα, φανερώνοντας τη <strong>διαχρονική ιερότητα του χώρου</strong> από την αρχαιότητα έως τον χριστιανισμό.</p>
+    <p><span class="pill pill-note">🕯️ Κύρια πανήγυρη: 8η Σεπτεμβρίου</span></p>
+    <a class="map-btn" href="https://maps.app.goo.gl/151g7Vqj8gpc7DKQ9" target="_blank">📍 Δες στον Χάρτη</a>
+  </div>
+</div><div id="panagia" class="item-card">
+  <img class="item-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Greek_Orthodox_Church_at_night.jpg/800px-Greek_Orthodox_Church_at_night.jpg" alt="Ναός Παναγίας" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="item-card-img-ph" style="display:none">🕊️</div>
+  <div class="item-card-body">
+    <h3>🕊️ Ιερός Ναός Παναγίας</h3>
+    <p>Στην είσοδο του χωριού υπάρχει ένα μικρό και γραφικό εκκλησάκι αφιερωμένο στην <strong>Παναγία</strong>. Είναι <strong>πετρόχτιστο</strong>, με παραδοσιακή κεραμοσκεπή και μικρό καμπαναριό.</p>
+    <p>Χρησιμοποιείται κυρίως για μικρές λειτουργίες, ειδικά σε γιορτές της Παναγίας. Όταν <strong>φωτίζεται το βράδυ</strong> δημιουργεί ένα πολύ όμορφο και κατανυκτικό θέαμα.</p>
+    <p><span class="pill pill-note">🕯️ Γιορτή: Δεκαπενταύγουστος (15 Αυγούστου)</span></p>
+    <a class="map-btn" href="https://maps.app.goo.gl/fKv5oiJxNeJJTpyL7" target="_blank">📍 Δες στον Χάρτη</a>
+  </div>
+</div><div id="agia_paraskevi" class="item-card">
+  <img class="item-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Byzantine_church_Boeotia.jpg/800px-Byzantine_church_Boeotia.jpg" alt="Αγία Παρασκευή" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="item-card-img-ph" style="display:none">🙏</div>
+  <div class="item-card-body">
+    <h3>🙏 Εκκλησία Αγίας Παρασκευής</h3>
+    <p>Στον δρόμο του χωριού προς τον οικισμό Αγίου Ιωάννη, σε <strong>ύψωμα</strong>, βρίσκεται η εκκλησία της Αγίας Παρασκευής. Ανταμείβει τον επισκέπτη με υπέροχη θέα πάνω από το Ακραίφνιο και προς τη <strong>λίμνη Υλίκη</strong>.</p>
+    <p>Διατηρεί <strong>βυζαντινά αρχιτεκτονικά πρότυπα του 12ου αιώνα</strong> ως καθολικό παλιάς μονής. Ο επιμελημένος προαύλιος χώρος και η ηρεμία της θέας δημιουργούν ατμόσφαιρα κατάνυξης.</p>
+    <p><span class="pill pill-note">🕯️ Γιορτή: 26 Ιουλίου</span></p>
+    <a class="map-btn" href="https://maps.app.goo.gl/LEwZ6AnQFzesJgLM6" target="_blank">📍 Δες στον Χάρτη</a>
+  </div>
+</div>
+</div>
+<footer>
+  <strong>Τουριστικός Οδηγός Ακραιφνίου</strong> — Ακραίφνιο Βοιωτίας &nbsp;|&nbsp;
+  <span style="opacity:.8">Πληροφορίες από τους μαθητές μας 🎓</span>
+</footer>
+</body>
+</html>
